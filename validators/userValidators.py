@@ -10,9 +10,8 @@ def validationUser(user: CreateUser)-> bool:
     if user.name is "" or user.email is "" or user.password is "": 
         return False
     return True
-
-def validationLogin(user: Login)-> bool:
-    if user.email is "" or user.password is "":
-        return False
-    return True
         
+def empty(string:str):
+    if string != "":
+        return True
+    return False

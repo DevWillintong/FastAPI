@@ -1,4 +1,3 @@
-from queue import Empty
 from fastapi import APIRouter, HTTPException, status
 from config.db import conn
 from models.productModel import products

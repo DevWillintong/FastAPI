@@ -16,7 +16,8 @@ class Login(BaseModel):
     email: str
     password: str
 
-class UserUpdateName(BaseModel):
-    name: str
+class PasswordUpdate(BaseModel):
+    oldPassword: str
+    newPassword: str
 
 

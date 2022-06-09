@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from routes.User import user
 from routes.Product import  product
+from routes.Pokemon import pokemon
+from routes.Auth import auth
 
 app = FastAPI(
     title = "First API",
@@ -10,7 +12,9 @@ app = FastAPI(
                     {"name": "App", "description": "App Routes"}]
 )
 app.include_router(user, tags = ["Users"]) 
+app.include_router(auth, tags = ["Auth"]) 
 app.include_router(product, tags = ["Product"]) 
+app.include_router(pokemon, tags = ["Pokemon"]) 
 
 @app.get('/', tags = ["App"])
 def home():
